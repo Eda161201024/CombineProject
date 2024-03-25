@@ -1,0 +1,9 @@
+bana html ile pembe ve mavi t-shirt, pantolon, ayakkabı resmi (toplam 6 resim) arasından 1 t-shirt, 1 pantolon, 1 ayakkabı seçtir. seçimlere göre ekrana 3 resmi dosyalardan getir.
+
+bu kodu 2x3 lük düzende düzenle. 1 tshirt ve 1 pantolon seçmek zorunlu olsun. 2 ya da 0 seçime izin vermesin.
+
+aynı kodda başlığı renkli yaz. seçenekleri de pembe olanı pembe mavi olanı mavi renkle işaretlesin. Başlık Siyah ile yazsın.
+
+resimleri 3 ayrı resim arasından seçsin. dosya isimlerinin başına Default_ sonuna 0 ya da 1 ya da 2 koy. rastgele seçim yapsın.
+
+Default başa numara sona gelsin. örneğin Default_pink_trousers_0 gibi olsun
