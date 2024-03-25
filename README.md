@@ -4,7 +4,7 @@ Bu basit web uygulaması, kullanıcının pembe ve mavi renk seçeneklerinden bi
 
 ## Kullanım
 
-1. İlk olarak, tarayıcınızda "index.html" dosyasını açın.
+1. İlk olarak, tarayıcınızda "CombineYourOutfit.html" dosyasını açın.
 2. Pembe veya mavi renk seçeneklerinden bir T-shirt seçin.
 3. Pembe veya mavi renk seçeneklerinden bir pantolon seçin.
 4. "Seçimi Onayla" düğmesine tıklayın.
