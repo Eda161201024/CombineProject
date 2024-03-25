@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-shirt ve Pantolon Seçimi</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+        color: black;
+        margin-bottom: 10px;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .item {
+        text-align: center;
+    }
+    .item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    .pink {
+        color: #ff69b4;
+    }
+    .blue {
+        color: #3366ff;
+    }
+    .selectedItems {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .selectedItems img {
+        width: 30%;
+        border-radius: 8px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>T-shirt ve Pantolon Seçimi</h2>
+    <form id="selectionForm">
+        <div class="item">
+            <input type="radio" id="tshirtPink" name="tshirt" value="pink">
+            <label for="tshirtPink" class="pink">Pembe T-shirt</label>
+        </div>
+        <div class="item">
+            <input type="radio" id="tshirtBlue" name="tshirt" value="blue">
+            <label for="tshirtBlue" class="blue">Mavi T-shirt</label>
+        </div>
+        <div class="item">
+            <input type="radio" id="trousersPink" name="trousers" value="pink">
+            <label for="trousersPink" class="pink">Pembe Pantolon</label>
+        </div>
+        <div class="item">
+            <input type="radio" id="trousersBlue" name="trousers" value="blue">
+            <label for="trousersBlue" class="blue">Mavi Pantolon</label>
+        </div>
+        <button type="submit">Seçimi Onayla</button>
+    </form>
+    
+    <div id="selectedItems" style="margin-top: 20px;"></div>
+</div>
+
+<script>
+    const form = document.getElementById('selectionForm');
+    const selectedItemsDiv = document.getElementById('selectedItems');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const selectedTshirtValue = document.querySelector('input[name="tshirt"]:checked').value;
+        const selectedTrousersValue = document.querySelector('input[name="trousers"]:checked').value;
+
+        const selectedItemsHTML = `
+            <div class="selectedItems">
+                <img src="Default_${selectedTshirtValue}_tshirt_0.jpg" alt="Seçilen T-shirt">
+                <img src="Default_${selectedTrousersValue}_trousers_0.jpg" alt="Seçilen Pantolon">
+            </div>
+        `;
+        selectedItemsDiv.innerHTML = `<p>Kombininiz:</p>` + selectedItemsHTML;
+    });
+</script>
+
+</body>
+</html>
